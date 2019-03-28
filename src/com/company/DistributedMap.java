@@ -114,7 +114,7 @@ public class DistributedMap implements Receiver, SimpleStringMap {
 
         public void run() {
             Vector<View> subgroups = (Vector<View>) view.getSubgroups();
-            View tmp_view = subgroups.firstElement(); // picks the first
+            View tmp_view = subgroups.firstElement();
             Address local_addr = ch.getAddress();
             if(!tmp_view.getMembers().contains(local_addr)) {
                 System.out.println("dropping own state");
